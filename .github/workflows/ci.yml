@@ -1,0 +1,14 @@
+name: bild page
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Java
+        uses: actions/setup-java@v4.5.0
